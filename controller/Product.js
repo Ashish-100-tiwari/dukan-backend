@@ -20,7 +20,7 @@ exports.fetchAllProducts = async (req, res) => {
   if(!req.query.admin){
       condition.deleted = {$ne:true}
   }
-
+  
   let query = Product.find(condition);
   let totalProductsQuery = Product.find(condition);
 
